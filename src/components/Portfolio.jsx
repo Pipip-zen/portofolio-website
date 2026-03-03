@@ -44,7 +44,7 @@ const projects = [
         id: 3,
         title: 'ArtEngine Studio',
         desc: 'Generative AI image creation and editing tool for designers.',
-        type: 'Design',
+        type: 'Apps',
         tags: ['Next.js', 'Stable Diffusion', 'Canvas API'],
         accent: '#EC4899',
         cols: 'col-span-1',
@@ -86,7 +86,7 @@ const projects = [
     },
 ]
 
-const filters = ['All', 'Web', 'Apps', 'Design']
+const filters = ['All', 'Web', 'Apps', 'Game', 'Design', 'Others']
 
 /* ── Laptop Mockup ── */
 function LaptopMockup({ screen, accent, title, image }) {
@@ -341,16 +341,41 @@ export default function Portfolio() {
 
                 {/* Masonry-style grid */}
                 <AnimatePresence mode="popLayout">
-                    <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {filtered.map((project, i) => (
-                            <ProjectCard
-                                key={project.id}
-                                project={project}
-                                delay={i * 0.08}
-                                inView={inView}
-                            />
-                        ))}
-                    </motion.div>
+                    {filtered.length > 0 ? (
+                        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                            {filtered.map((project, i) => (
+                                <ProjectCard
+                                    key={project.id}
+                                    project={project}
+                                    delay={i * 0.08}
+                                    inView={inView}
+                                />
+                            ))}
+                        </motion.div>
+                    ) : (
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            className="flex flex-col items-center justify-center py-24 glass rounded-3xl border border-white/5"
+                        >
+                            <div className="relative mb-6">
+                                <div className="absolute inset-0 blur-2xl bg-electric/20 rounded-full" />
+                                <span className="relative text-5xl">✨</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-2">Coming Soon</h3>
+                            <p className="text-white/40 text-sm max-w-[280px] text-center leading-relaxed">
+                                I'm currently working on some exciting projects in this category. Stay tuned!
+                            </p>
+
+                            {/* Decorative elements */}
+                            <div className="flex gap-2 mt-8">
+                                <div className="w-1.5 h-1.5 rounded-full bg-electric/20" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-electric/40" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-electric/20" />
+                            </div>
+                        </motion.div>
+                    )}
                 </AnimatePresence>
 
                 {/* View all button */}
