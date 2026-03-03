@@ -24,16 +24,11 @@ export default function Footer() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="flex items-center gap-3"
                     >
-                        <span
-                            className="text-xl font-extrabold tracking-tighter"
-                            style={{ color: '#4285F4' }}
-                        >
-                            ME
-                        </span>
+                        <img src="/logo-rn.svg" alt="RN Logo" className="h-6 w-auto" />
                         <div className="h-4 w-px bg-white/15" />
                         <div>
-                            <p className="text-white/70 text-xs font-semibold leading-tight">Your Name</p>
-                            <p className="text-white/30 text-[10px]">Full-Stack Developer &amp; Designer</p>
+                            <p className="text-white/70 text-xs font-semibold leading-tight">Rafif Nuha</p>
+                            <p className="text-white/30 text-[10px]">Full-Stack Developer & Designer</p>
                         </div>
                     </motion.div>
 

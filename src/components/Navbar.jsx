@@ -24,21 +24,18 @@ export default function Navbar() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? 'py-3 glass border-b border-white/10 shadow-glow-card'
-                    : 'py-5 bg-transparent'
+                ? 'py-3 glass border-b border-white/10 shadow-glow-card'
+                : 'py-5 bg-transparent'
                 }`}
         >
             <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <motion.a
                     href="#"
-                    className="relative group"
+                    className="relative group flex items-center"
                     whileHover={{ scale: 0.97 }}
                 >
-                    <span className="text-2xl font-extrabold tracking-tighter text-electric">
-                        ME
-                    </span>
-                    <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-electric to-purple-500 group-hover:w-full transition-all duration-300" />
+                    <img src="/logo-rn.svg" alt="RN Logo" className="h-8 w-auto" />
                 </motion.a>
 
                 {/* Desktop Nav */}
