@@ -15,8 +15,8 @@ export default function CodeStats() {
     const isInView = useInView(ref, { once: true, margin: '-100px' })
     const username = 'Pipip-zen'
 
-    // Theme configuration for GitHub stats
-    const statsTheme = "theme=transparent&hide_border=true&title_color=4285F4&icon_color=4285F4&text_color=ffffff99&text_bold=false"
+    // Theme configuration for GitHub stats (matching website dark theme)
+    const statsTheme = "bg_color=0B0F1A&hide_border=true&title_color=4285F4&icon_color=4285F4&text_color=ffffff&text_bold=false"
     const streakTheme = "theme=transparent&hide_border=true&stroke=4285F4&ring=4285F4&fire=F59E0B&currStreakNum=ffffff&sideLabels=ffffff99&dates=ffffff99"
 
     const githubStats = [
@@ -158,12 +158,6 @@ export default function CodeStats() {
                                             className="h-full bg-gradient-to-r from-green-500 to-emerald-400 shadow-[0_0_8px_rgba(34,197,94,0.4)]"
                                         />
                                     </div>
-                                </div>
-
-                                {/* Text sample from screenshot */}
-                                <div className="mt-4 p-4 rounded-xl bg-midnight/40 border border-white/5 font-mono text-xs whitespace-nowrap overflow-hidden">
-                                    <span className="text-white/70">const</span> <span className="text-blue-400">solution</span> <span className="text-white/70">=</span> <span className="text-emerald-400">buildAndDeliv</span>
-                                    <span className="w-1.5 h-3.5 bg-electric inline-block ml-1 animate-pulse align-middle" />
                                 </div>
                             </div>
                         </div>
