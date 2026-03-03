@@ -37,6 +37,7 @@ const projects = [
         screen: '#0d2010',
         mockupType: 'laptop',
         image: '/portofolio/invoice.png',
+        demoUrl: 'https://invoice-generator-khaki-nu.vercel.app/dashboard',
         githubUrl: 'https://invoice-generator-doc.vercel.app/',
         githubLabel: 'Documentation',
     },
@@ -247,18 +248,20 @@ function ProjectCard({ project, delay, inView }) {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                    <a
-                        href={project.demoUrl || "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold transition-all duration-200 hover:opacity-80"
-                        style={{ color: project.accent }}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                        </svg>
-                        Live Demo
-                    </a>
+                    {project.demoUrl && (
+                        <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold transition-all duration-200 hover:opacity-80"
+                            style={{ color: project.accent }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                            </svg>
+                            Live Demo
+                        </a>
+                    )}
                     <a
                         href={project.githubUrl || "#"}
                         target="_blank"
