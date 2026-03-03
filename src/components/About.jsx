@@ -32,7 +32,7 @@ const infoCards = [
             </svg>
         ),
         label: 'Based In',
-        value: 'Indonesia 🇮🇩',
+        value: 'Surabaya, Indonesia 🇮🇩',
         accent: '#00D2FF',
     },
     {
@@ -42,7 +42,7 @@ const infoCards = [
             </svg>
         ),
         label: 'Availability',
-        value: 'Open to Work',
+        value: 'Open to Projects',
         accent: '#22C55E',
     },
     {
@@ -61,7 +61,7 @@ const infoCards = [
 const nicheCards = [
     { icon: '👁️', title: 'Computer Vision', desc: 'Object detection & image processing pipelines' },
     { icon: '🎮', title: 'Interactive Media', desc: 'Immersive web experiences & WebGL' },
-    { icon: '🤖', title: 'AI Integration', desc: 'LLM-powered tools & automation' },
+    { icon: '⚡', title: 'Full Stack Dev', desc: 'End-to-end web apps from UI to backend APIs' },
     { icon: '📱', title: 'Mobile-First Design', desc: 'Fluid, responsive interfaces across devices' },
 ]
 
@@ -89,51 +89,33 @@ export default function About() {
                     variants={fadeIn} initial="hidden" animate={inView ? 'show' : 'hidden'} custom={0}
                     className="flex items-center gap-3 mb-4"
                 >
-                    <span className="text-xs font-bold tracking-[0.25em] uppercase text-electric/80">01 — About</span>
+                    <span className="text-xs font-bold tracking-[0.25em] uppercase text-electric/80">01 — About Me</span>
                     <div className="flex-1 h-px bg-gradient-to-r from-electric/30 to-transparent max-w-[120px]" />
                 </motion.div>
 
                 <motion.h2
                     variants={fadeUp} initial="hidden" animate={inView ? 'show' : 'hidden'} custom={0.1}
-                    className="text-4xl xl:text-5xl font-extrabold mb-14 leading-tight"
+                    className="text-4xl xl:text-5xl font-extrabold mb-8 leading-tight"
                 >
                     The Human Behind<br />
                     <span className="gradient-text">the Code</span>
                 </motion.h2>
 
                 {/* Main grid: bio left, cards right */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* LEFT — Bio */}
                     <motion.div
                         variants={fadeUp} initial="hidden" animate={inView ? 'show' : 'hidden'} custom={0.2}
                         className="flex flex-col gap-5"
                     >
                         <p className="text-white/70 text-base leading-relaxed">
-                            Hi, I'm a passionate developer and designer who loves turning complex problems into
-                            elegant, user-centered solutions. With 6+ years in the industry, I've led projects
-                            across fintech, e-commerce, and creative media sectors.
+                            A Multimedia Engineering student who builds things — from web apps to network infrastructure.
+                            Always learning, always improving, and ready to collaborate on projects that matter.
                         </p>
                         <p className="text-white/55 text-sm leading-relaxed">
-                            I believe great software is both technically robust and beautifully intuitive.
-                            My workflow bridges high-fidelity design systems with clean, scalable engineering —
-                            from architecting REST/GraphQL APIs to crafting pixel-perfect React interfaces.
+                            I believe every project is a chance to grow. From building fullstack applications to handling network infrastructure,
+                            I focus on delivering solutions that are reliable, scalable, and user-friendly.
                         </p>
-                        <p className="text-white/55 text-sm leading-relaxed">
-                            Outside coding, I explore computational art, contribute to open-source tooling,
-                            and mentor junior developers. I'm driven by curiosity and the belief that
-                            technology should empower people.
-                        </p>
-
-                        {/* CTA */}
-                        <div className="flex gap-3 mt-2">
-                            <a href="#" className="btn-primary text-xs px-5 py-2.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                </svg>
-                                Download CV
-                            </a>
-                            <a href="#contact" className="btn-outline text-xs px-5 py-2.5">Get in Touch</a>
-                        </div>
                     </motion.div>
 
                     {/* RIGHT — 2×2 Info Cards */}
