@@ -37,7 +37,6 @@ const projects = [
         screen: '#0d2010',
         mockupType: 'laptop',
         image: '/portofolio/invoice.png',
-        demoUrl: 'https://invoice-generator-khaki-nu.vercel.app/dashboard',
         githubUrl: 'https://invoice-generator-doc.vercel.app/',
         githubLabel: 'Documentation',
     },
