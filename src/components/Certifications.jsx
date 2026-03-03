@@ -74,7 +74,7 @@ const certs = [
     {
         issuer: 'Red Hat',
         accent: '#EE0000',
-        logo: '/red-hat.png.png',
+        logo: '/red-hat.png',
         title: 'Red Hat Certified Specialist in Containers',
         subtitle: 'Red Hat',
         year: '2022',
