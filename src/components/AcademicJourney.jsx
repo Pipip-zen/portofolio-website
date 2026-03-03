@@ -22,6 +22,7 @@ const timeline = [
         accent: '#4285F4',
         icon: '🎓',
         side: 'left',
+        logo: '/PENS.PNG',
     },
     {
         period: 'January 2023 – March 2023',
@@ -33,6 +34,7 @@ const timeline = [
         accent: '#F59E0B',
         icon: '💼',
         side: 'right',
+        logo: '/educa.png',
     },
     {
         period: '2021 – 2024',
@@ -44,6 +46,7 @@ const timeline = [
         accent: '#7B2FBE',
         icon: '🎓',
         side: 'left',
+        logo: '/SMK.png',
     },
 ]
 
@@ -126,13 +129,28 @@ function TimelineCardContent({ item }) {
                 style={{ background: `radial-gradient(ellipse at top left, ${item.accent}0d, transparent 70%)` }}
             />
 
-            {/* Period badge */}
-            <span
-                className="inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full mb-3"
-                style={{ background: `${item.accent}22`, color: item.accent }}
-            >
-                {item.period}
-            </span>
+            {/* Period badge + Logo row */}
+            <div className="flex items-center justify-between gap-3 mb-3">
+                <span
+                    className="inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
+                    style={{ background: `${item.accent}22`, color: item.accent }}
+                >
+                    {item.period}
+                </span>
+                {item.logo && (
+                    <div
+                        className="flex-shrink-0 flex items-center justify-center rounded-xl p-1.5"
+                        style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)', width: 56, height: 56 }}
+                    >
+                        <img
+                            src={item.logo}
+                            alt={item.school}
+                            className="w-full h-full object-contain"
+                            style={{ filter: 'drop-shadow(0 0 4px rgba(0,0,0,0.5))' }}
+                        />
+                    </div>
+                )}
+            </div>
 
             <h3 className="text-white font-bold text-base leading-snug mb-2">{item.degree}</h3>
             <p className="text-white/60 text-sm font-medium mb-2">{item.school}</p>
