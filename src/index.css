@@ -1,0 +1,100 @@
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+@import '@fontsource/plus-jakarta-sans/800.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0C101A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #E2E8F0;
+    min-height: 100vh;
+    /* 20px dark grid overlay */
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer components {
+  /* Universal hover interaction for buttons and cards */
+  .hover-zoom {
+    @apply transition-all duration-200 ease-out cursor-pointer;
+  }
+  .hover-zoom:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Glassmorphism utility */
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    background: linear-gradient(135deg, #00D2FF 0%, #7B2FBE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white hover-zoom;
+    background: linear-gradient(135deg, #4285F4 0%, #2563EB 100%);
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-electric hover-zoom;
+    border: 1px solid rgba(66, 133, 244, 0.5);
+    background: rgba(66, 133, 244, 0.08);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm hover-zoom;
+    color: rgba(226, 232, 240, 0.7);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Stat cards */
+  .stat-card {
+    @apply glass rounded-2xl p-3 flex items-center gap-3 hover-zoom;
+    min-width: 140px;
+  }
+
+  /* Portrait card */
+  .portrait-card {
+    @apply relative overflow-hidden;
+    border-radius: 32px;
+    background: linear-gradient(135deg, rgba(66,133,244,0.2), rgba(123,47,190,0.2));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 30px rgba(66, 133, 244, 0.5);
+  }
+}
