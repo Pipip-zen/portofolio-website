@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react'
 
 const navLinks = [
     { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Academic', href: '#academic' },
+    { label: 'Arsenal', href: '#skills' },
+    { label: 'Stats', href: '#activity' },
+    { label: 'Certifications', href: '#certifications' },
+    { label: 'Portfolio', href: '#portfolio' },
 ]
 
 export default function Navbar() {
@@ -49,10 +51,10 @@ export default function Navbar() {
                         >
                             <a
                                 href={link.href}
-                                className="relative text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 group"
+                                className={`relative text-sm font-medium transition-colors duration-200 group ${scrolled ? 'text-white/80 hover:text-white' : 'text-white/70 hover:text-white'}`}
                             >
                                 {link.label}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric group-hover:w-full transition-all duration-300 rounded-full" />
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric group-hover:w-full transition-all duration-300 rounded-full shadow-[0_0_8px_rgba(66,133,244,0.6)]" />
                             </a>
                         </motion.li>
                     ))}
