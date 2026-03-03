@@ -13,39 +13,36 @@ const fadeIn = {
 /* ── Timeline data ── */
 const timeline = [
     {
-        period: '2019 – 2023',
-        degree: "Bachelor's in Informatics Engineering",
-        school: 'University of Technology',
-        location: 'Bandung, Indonesia',
-        gpa: '3.87 / 4.00',
-        desc: 'Specialized in software architecture and human-computer interaction. Graduated Cum Laude with a thesis on real-time distributed systems.',
-        tags: ['Algorithms', 'HCI', 'Distributed Systems', 'Database Design'],
+        period: '2024 – Present',
+        degree: "Undergraduate in Multimedia Engineering Technology",
+        school: 'Electronic Engineering Polytechnic Institute of Surabaya',
+        location: 'Surabaya, Indonesia',
+        desc: 'Focusing on full-stack development, network systems, and immersive media.',
+        tags: ['Full Stack Development', 'Network Systems', 'Immersive Media', 'Software Engineering'],
         accent: '#4285F4',
         icon: '🎓',
         side: 'left',
     },
     {
-        period: '2023 – 2025',
-        degree: "Master's in Computer Science",
-        school: 'Institute of Advanced Technology',
-        location: 'Jakarta, Indonesia',
-        gpa: '3.94 / 4.00',
-        desc: 'Research focus on neural rendering and real-time computer graphics. Collaborated with industry partners on interactive media installations.',
-        tags: ['Neural Rendering', 'Computer Vision', 'WebGL', 'Deep Learning'],
-        accent: '#7B2FBE',
-        icon: '🔬',
+        period: 'January 2023 – March 2023',
+        degree: "Intern Front-End Developer",
+        school: 'PT. Educa Sisfomedia Indonesia',
+        location: 'Salatiga, Indonesia',
+        desc: 'Developed a business website for a local UMKM as the final internship project, focusing on clean UI and responsive design.',
+        tags: ['Full Stack Development', 'Network Systems', 'Immersive Media', 'Software Engineering'],
+        accent: '#F59E0B',
+        icon: '💼',
         side: 'right',
     },
     {
-        period: '2023',
-        degree: 'Exchange Program',
-        school: 'Seoul National University',
-        location: 'Seoul, South Korea',
-        gpa: 'Distinction',
-        desc: 'Semester abroad focused on AI-driven UX research and advanced prototyping methodologies within the Digital Innovation Lab.',
-        tags: ['UX Research', 'Prototyping', 'AI/UI', 'Innovation'],
-        accent: '#00D2FF',
-        icon: '🌏',
+        period: '2021 – 2024',
+        degree: "Computer & Network Engineering",
+        school: 'Ihsanul Fikri Vocational High School',
+        location: 'Magelang, Indonesia',
+        desc: 'Specialized in computer and network systems. Achieved 2nd place in the Web Technology competition (LKS) at the city level in 2023.',
+        tags: ['Computer Systems', 'Network Administrator',],
+        accent: '#7B2FBE',
+        icon: '🎓',
         side: 'left',
     },
 ]
@@ -137,22 +134,12 @@ function TimelineCardContent({ item }) {
                 {item.period}
             </span>
 
-            <h3 className="text-white font-bold text-base leading-snug mb-0.5">{item.degree}</h3>
-            <p className="text-white/60 text-sm font-medium">{item.school}</p>
+            <h3 className="text-white font-bold text-base leading-snug mb-2">{item.degree}</h3>
+            <p className="text-white/60 text-sm font-medium mb-2">{item.school}</p>
             <p className="text-white/35 text-xs mb-3">{item.location}</p>
 
-            {/* GPA */}
-            <div
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-lg mb-3"
-                style={{ background: `${item.accent}18`, color: item.accent }}
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                GPA {item.gpa}
-            </div>
-
             <p className="text-white/45 text-xs leading-relaxed mb-3">{item.desc}</p>
+
 
             {/* Tech tags */}
             <div className="flex flex-wrap gap-1.5">
@@ -206,7 +193,7 @@ export default function AcademicJourney() {
                     variants={fadeUp} initial="hidden" animate={inView ? 'show' : 'hidden'} custom={0.18}
                     className="text-white/50 text-sm max-w-md mb-16"
                 >
-                    A path of continuous growth — from theory to practice, shaped by research, curiosity, and collaboration.
+                    A path of continuous growth — from theory to practice, shaped by curiosity, and collaboration.
                 </motion.p>
 
                 {/* Timeline */}
