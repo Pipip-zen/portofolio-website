@@ -32,23 +32,23 @@ const slideRight = {
 const stats = [
     {
         icon: '🏆',
-        value: '6+',
-        label: 'Years Exp.',
+        value: '2+',
+        label: 'Years Building.',
         position: 'top-8 -left-12',
         animDelay: 1.2,
         floatClass: 'animate-float',
     },
     {
         icon: '🚀',
-        value: '35+',
-        label: 'Projects',
+        value: '5+',
+        label: 'Projects Delivered',
         position: 'bottom-24 -left-14',
         animDelay: 1.5,
         floatClass: 'animate-float-delayed',
     },
     {
         icon: '📜',
-        value: '12',
+        value: '8',
         label: 'Certifications',
         position: 'top-20 -right-12',
         animDelay: 1.8,
@@ -77,16 +77,6 @@ const buttons = [
         ),
         href: '#contact',
         className: 'btn-outline',
-    },
-    {
-        label: 'Showreel',
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-            </svg>
-        ),
-        href: '#',
-        className: 'btn-ghost',
     },
 ]
 
@@ -121,7 +111,7 @@ export default function Hero() {
                     >
                         <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs font-semibold text-electric">
                             <span className="w-2 h-2 rounded-full bg-electric animate-pulse" />
-                            Available for Work
+                            Open to Projects
                         </span>
                     </motion.div>
 
@@ -133,10 +123,10 @@ export default function Hero() {
                         custom={0.6}
                         className="text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight"
                     >
-                        Crafting{' '}
-                        <span className="gradient-text">Bold Digital</span>
+                        Turning Ideas into{' '}
+                        <span className="gradient-text">Digital Solutions</span>
                         <br />
-                        Experiences
+
                     </motion.h1>
 
                     {/* Intro paragraphs */}
@@ -148,12 +138,10 @@ export default function Hero() {
                         className="flex flex-col gap-4"
                     >
                         <p className="text-white/60 text-base leading-relaxed max-w-md">
-                            I'm a full-stack developer and UI/UX designer with 6+ years of experience crafting
-                            fast, beautiful, and accessible web products that leave lasting impressions.
+                            I'm a Multimedia Engineering Technology student with hands-on experience in full-stack development and network infrastructure.
                         </p>
                         <p className="text-white/50 text-sm leading-relaxed max-w-sm">
-                            From concept to deployment — I bridge the gap between stunning design and
-                            rock-solid engineering, helping brands stand out in the digital landscape.
+                            From managing end-to-end web projects to configuring network systems, I bring technical depth to every build.
                         </p>
                     </motion.div>
 
@@ -259,8 +247,8 @@ export default function Hero() {
                             {/* Name tag at bottom */}
                             <div className="absolute bottom-4 left-4 right-4 z-20">
                                 <div className="glass rounded-xl px-3 py-2">
-                                    <p className="text-white font-bold text-sm">Your Name</p>
-                                    <p className="text-electric text-xs font-medium">Full-Stack Developer & Designer</p>
+                                    <p className="text-white font-bold text-sm">Rafif Nuha</p>
+                                    <p className="text-electric text-xs font-medium">Full-Stack Developer & Network Engineer</p>
                                 </div>
                             </div>
                         </div>
