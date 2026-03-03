@@ -17,10 +17,9 @@ const skillCategories = [
         icon: '🖥️',
         accent: '#4285F4',
         skills: [
-            { name: 'React / Next.js', level: 95 },
-            { name: 'TypeScript', level: 88 },
-            { name: 'Tailwind CSS', level: 92 },
-            { name: 'Framer Motion', level: 80 },
+            { name: 'HTML / CSS', proficiency: 'Confident' },
+            { name: 'Tailwind CSS', proficiency: 'Confident' },
+            { name: 'React / Vue JS', proficiency: 'Familiar' },
         ],
     },
     {
@@ -28,21 +27,18 @@ const skillCategories = [
         icon: '⚙️',
         accent: '#7B2FBE',
         skills: [
-            { name: 'Node.js / Express', level: 90 },
-            { name: 'Python / FastAPI', level: 82 },
-            { name: 'PostgreSQL', level: 78 },
-            { name: 'GraphQL', level: 74 },
+            { name: 'PHP / Laravel', proficiency: 'Confident' },
+            { name: 'Python', proficiency: 'Familiar' },
         ],
     },
     {
-        title: 'AI & Vision',
+        title: 'Creative & Vision',
         icon: '🤖',
         accent: '#EC4899',
         skills: [
-            { name: 'PyTorch / TensorFlow', level: 75 },
-            { name: 'OpenCV', level: 80 },
-            { name: 'LangChain / RAG', level: 70 },
-            { name: 'Three.js / WebGL', level: 72 },
+            { name: 'Three.js & WebGL', proficiency: 'Confident' },
+            { name: 'Babylon.js', proficiency: 'Confident' },
+            { name: 'OpenCV', proficiency: 'Familiar' },
         ],
     },
     {
@@ -50,45 +46,47 @@ const skillCategories = [
         icon: '🛠️',
         accent: '#22C55E',
         skills: [
-            { name: 'Docker / CI-CD', level: 82 },
-            { name: 'AWS / Vercel', level: 78 },
-            { name: 'Git / GitHub', level: 95 },
-            { name: 'Figma / Design', level: 88 },
+            { name: 'Git / GitHub', proficiency: 'Confident' },
+            { name: 'AWS / Vercel', proficiency: 'Confident' },
+            { name: 'Docker', proficiency: 'Familiar' },
+            { name: 'Figma', proficiency: 'Familiar' },
         ],
     },
 ]
 
 /* ── Interests ── */
 const interests = [
-    { icon: '📸', title: 'Photography' },
-    { icon: '🎵', title: 'Music Production' },
-    { icon: '🧠', title: 'Cognitive Science' },
-    { icon: '🌿', title: 'Bouldering' },
-    { icon: '📚', title: 'Sci-Fi Literature' },
-    { icon: '🎨', title: 'Generative Art' },
+    { icon: '🎮', title: 'Gaming' },
+    { icon: '🎬', title: 'Film' },
+    { icon: '⚔️', title: 'Medieval History' },
+    { icon: '👓', title: 'Nerd Stuff' },
+    { icon: '🌐', title: 'Tech Exploration' },
+    { icon: '⌨️', title: 'Tech Gear Enthusiast' },
 ]
 
-/* ── Animated progress bar ── */
-function SkillBar({ skill, accent, inView, delay }) {
+/* ── Skill row ── */
+function SkillItem({ skill, accent, inView, delay }) {
+    const isConfident = skill.proficiency.toLowerCase() === 'confident'
+
     return (
-        <div className="flex flex-col gap-1.5">
-            <div className="flex items-center justify-between">
-                <span className="text-white/70 text-xs font-medium">{skill.name}</span>
-                <span className="text-xs font-bold" style={{ color: accent }}>{skill.level}%</span>
-            </div>
-            <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-                <motion.div
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                    transition={{ duration: 1, ease: 'easeOut', delay }}
-                    className="h-full rounded-full"
-                    style={{
-                        background: `linear-gradient(90deg, ${accent}bb, ${accent})`,
-                        boxShadow: `0 0 8px ${accent}66`,
-                    }}
-                />
-            </div>
-        </div>
+        <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay }}
+            className="flex items-center justify-between py-1.5 border-b border-white/5 last:border-0"
+        >
+            <span className="text-white/80 text-sm font-medium">{skill.name}</span>
+            <span
+                className="text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-md"
+                style={{
+                    color: isConfident ? accent : 'rgba(255,255,255,0.6)',
+                    background: isConfident ? `${accent}15` : 'rgba(255,255,255,0.05)',
+                    border: `1px solid ${isConfident ? `${accent}30` : 'rgba(255,255,255,0.1)'}`
+                }}
+            >
+                {skill.proficiency}
+            </span>
+        </motion.div>
     )
 }
 
@@ -167,9 +165,9 @@ export default function TechnicalArsenal() {
                             </div>
 
                             {/* Skills */}
-                            <div className="flex flex-col gap-3.5">
+                            <div className="flex flex-col">
                                 {cat.skills.map((skill, si) => (
-                                    <SkillBar
+                                    <SkillItem
                                         key={skill.name}
                                         skill={skill}
                                         accent={cat.accent}
