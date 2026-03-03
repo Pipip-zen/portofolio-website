@@ -12,89 +12,100 @@ const fadeIn = {
 
 const certs = [
     {
-        issuer: 'Google',
-        accent: '#4285F4',
-        logo: (
-            <svg viewBox="0 0 48 48" className="w-8 h-8">
-                <path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3C33.6 33.1 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.5 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z" />
-                <path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.5 15.1 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.5 29.4 4 24 4c-7.7 0-14.3 4.5-17.7 10.7z" />
-                <path fill="#FBBC05" d="M24 44c5.3 0 10.1-1.9 13.7-5.1l-6.3-5.2C29.6 35.6 26.9 36 24 36c-5.1 0-9.5-2.9-11.3-7.1l-6.6 5.1C9.6 39.4 16.4 44 24 44z" />
-                <path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.9 2.5-2.5 4.6-4.6 6l6.3 5.2c-.4.4 6-4.4 6-13.2 0-1.2-.1-2.4-.4-3.5z" />
-            </svg>
-        ),
-        title: 'Professional Machine Learning Engineer',
-        subtitle: 'Google Cloud Certification',
+        issuer: 'MikroTik',
+        accent: '#FF0000',
+        logo: '/mikrotik.png',
+        title: 'MikroTik Certified Routing Engineering',
+        subtitle: 'MikroTik Certification',
         year: '2024',
-        id: 'GCP-MLE-2024-9821',
-        tags: ['ML', 'Cloud', 'TensorFlow'],
-        bgGrad: 'linear-gradient(135deg, rgba(66,133,244,0.18), rgba(66,133,244,0.04))',
+        id: '2402RE5771',
+        tags: ['MikroTik', 'Routing', 'Networking'],
+        bgGrad: 'linear-gradient(135deg, rgba(255,0,0,0.18), rgba(255,0,0,0.04))',
+        verifyUrl: 'https://mikrotik.com/training/certificates/c285771c3217a1fb3895',
     },
     {
-        issuer: 'NVIDIA',
-        accent: '#76B900',
-        logo: (
-            <svg viewBox="0 0 48 48" className="w-8 h-8" fill="none">
-                <rect width="48" height="48" rx="10" fill="#76B900" />
-                <text x="5" y="34" fontSize="14" fontWeight="900" fill="white" fontFamily="sans-serif">NV</text>
-            </svg>
-        ),
-        title: 'Deep Learning for Computer Vision',
-        subtitle: 'NVIDIA DLI Certificate',
+        issuer: 'MikroTik',
+        accent: '#FF0000',
+        logo: '/mikrotik.png',
+        title: 'MikroTik Certified Network Associate',
+        subtitle: 'MikroTik Certification',
         year: '2023',
-        id: 'NVDLI-CV-2023-4417',
-        tags: ['Deep Learning', 'CUDA', 'Computer Vision'],
-        bgGrad: 'linear-gradient(135deg, rgba(118,185,0,0.18), rgba(118,185,0,0.04))',
+        id: '2303NA7558',
+        tags: ['MikroTik', 'Routing', 'Networking'],
+        bgGrad: 'linear-gradient(135deg, rgba(255,0,0,0.18), rgba(255,0,0,0.04))',
+        verifyUrl: 'https://mikrotik.com/training/certificates/c257558c3e6a1013e22e',
+    },
+    {
+        issuer: 'Cisco',
+        accent: '#00B4E5',
+        logo: '/cisco.png',
+        title: 'Cybersecurity Essentials',
+        subtitle: 'Cisco',
+        year: '2022',
+        id: '2e19f3f2-1bce-4046-9074-3230a0723393',
+        tags: ['Cybersecurity', 'Networking', 'Security'],
+        bgGrad: 'linear-gradient(135deg, rgba(0,180,229,0.18), rgba(0,180,229,0.04))',
+        verifyUrl: 'https://www.credly.com/badges/2e19f3f2-1bce-4046-9074-3230a0723393/linked_in_profile',
     },
     {
         issuer: 'AWS',
         accent: '#FF9900',
-        logo: (
-            <svg viewBox="0 0 48 48" className="w-8 h-8" fill="none">
-                <rect width="48" height="48" rx="10" fill="#232F3E" />
-                <path d="M14 28c3.2 1.7 6.5 2.6 10 2.6s6.8-.9 10-2.6" stroke="#FF9900" strokeWidth="2.5" strokeLinecap="round" />
-                <path d="M10 20l14 6 14-6" stroke="#FF9900" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M38 20v8M10 20v8" stroke="#FF9900" strokeWidth="2.5" strokeLinecap="round" />
-            </svg>
-        ),
-        title: 'AWS Solutions Architect – Associate',
+        logo: '/aws.png',
+        title: 'AWS Academy Graduate - Introduction to Cloud Semester 1',
         subtitle: 'Amazon Web Services',
-        year: '2023',
-        id: 'AWS-SAA-2023-0552',
-        tags: ['Cloud', 'Architecture', 'DevOps'],
+        year: '2022',
+        id: '778dde73-7024-44b3-add6-118b714540b4',
+        tags: ['AWS Cloud', 'AWS Support', 'AWS Core'],
         bgGrad: 'linear-gradient(135deg, rgba(255,153,0,0.18), rgba(255,153,0,0.04))',
+        verifyUrl: 'https://www.credly.com/badges/778dde73-7024-44b3-add6-118b714540b4/linked_in_profile',
     },
     {
-        issuer: 'Adobe',
-        accent: '#FF0000',
-        logo: (
-            <svg viewBox="0 0 48 48" className="w-8 h-8" fill="none">
-                <rect width="48" height="48" rx="10" fill="#FF0000" />
-                <path d="M8 38L20 10l6 14M40 38L28 10l-6 14M14 28h20" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-        ),
-        title: 'Adobe Certified Expert – Premiere Pro',
-        subtitle: 'Adobe Creative Cloud',
-        year: '2022',
-        id: 'ACE-PP-2022-7783',
-        tags: ['Video Editing', 'Motion Graphics', 'Creative'],
-        bgGrad: 'linear-gradient(135deg, rgba(255,0,0,0.18), rgba(255,0,0,0.04))',
+        issuer: 'Ec-Council',
+        accent: '#EE3124',
+        logo: '/ec-council.png',
+        title: 'Network Defense Essentials',
+        subtitle: 'Ec-Council',
+        year: '2024',
+        id: 'ECC6451279038',
+        tags: ['Network Defense', 'Security'],
+        bgGrad: 'linear-gradient(135deg, rgba(238,49,36,0.18), rgba(238,49,36,0.04))',
+        verifyUrl: null,
     },
     {
-        issuer: 'Meta',
-        accent: '#0668E1',
-        logo: (
-            <svg viewBox="0 0 48 48" className="w-8 h-8" fill="none">
-                <rect width="48" height="48" rx="10" fill="#0668E1" />
-                <path d="M8 30c0-4 2-8 5.5-10.5C17 17 21 17.5 24 19.5c3-2 7-2.5 10.5-.5S40 26 40 30" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
-                <ellipse cx="24" cy="30" rx="8" ry="5" stroke="white" strokeWidth="2.2" />
-            </svg>
-        ),
-        title: 'Meta Front-End Developer',
-        subtitle: 'Meta Professional Certificate',
+        issuer: 'Red Hat',
+        accent: '#EE0000',
+        logo: '/red-hat.png.png',
+        title: 'Red Hat Certified Specialist in Containers',
+        subtitle: 'Red Hat',
         year: '2022',
-        id: 'META-FE-2022-3341',
-        tags: ['React', 'JavaScript', 'UI Design'],
-        bgGrad: 'linear-gradient(135deg, rgba(6,104,225,0.18), rgba(6,104,225,0.04))',
+        id: '230-270-092',
+        tags: ['Containers', 'Red Hat', 'DevOps'],
+        bgGrad: 'linear-gradient(135deg, rgba(238,0,0,0.18), rgba(238,0,0,0.04))',
+        verifyUrl: 'https://www.credly.com/badges/05c334fb-8f74-4e30-b38b-fdb5e89dbaed/public_url',
+    },
+    {
+        issuer: 'Gamelab Indonesia',
+        accent: '#00AEEF',
+        logo: '/gamelab.png',
+        title: 'HTML dan CSS',
+        subtitle: 'Gamelab Indonesia',
+        year: '2022',
+        id: 'GL6862994310',
+        tags: ['HTML', 'CSS'],
+        bgGrad: 'linear-gradient(135deg, rgba(0,174,239,0.18), rgba(0,174,239,0.04))',
+        verifyUrl: 'https://www.gamelab.id/certificate/GL6862994310',
+    },
+    {
+        issuer: 'Gamelab Indonesia',
+        accent: '#00AEEF',
+        logo: '/gamelab.png',
+        title: 'Bootstrap dan SASS',
+        subtitle: 'Gamelab Indonesia',
+        year: '2022',
+        id: 'GL2637762688',
+        tags: ['Bootstrap', 'SASS'],
+        bgGrad: 'linear-gradient(135deg, rgba(0,174,239,0.18), rgba(0,174,239,0.04))',
+        verifyUrl: 'https://www.gamelab.id/certificate/GL2637762688',
     },
 ]
 
@@ -198,9 +209,18 @@ export default function Certifications() {
 
                             {/* Logo + issuer */}
                             <div className="flex items-center gap-3 mb-4">
-                                {cert.logo}
+                                <div
+                                    className="w-10 h-10 rounded-xl flex items-center justify-center p-1.5 overflow-hidden"
+                                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)' }}
+                                >
+                                    <img
+                                        src={cert.logo}
+                                        alt={cert.issuer}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
                                 <div>
-                                    <p className="text-white font-bold text-sm">{cert.issuer}</p>
+                                    <p className="text-white font-bold text-sm leading-tight">{cert.issuer}</p>
                                     <p className="text-white/40 text-[10px]">{cert.year}</p>
                                 </div>
                             </div>
@@ -226,20 +246,26 @@ export default function Certifications() {
                             <p className="text-white/25 text-[10px] font-mono mb-4">ID: {cert.id}</p>
 
                             {/* Verify button */}
-                            <a
-                                href="#"
-                                className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 hover:scale-95"
-                                style={{
-                                    background: `${cert.accent}22`,
-                                    color: cert.accent,
-                                    border: `1px solid ${cert.accent}35`,
-                                }}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                                </svg>
-                                Verify Certificate
-                            </a>
+                            {cert.verifyUrl ? (
+                                <a
+                                    href={cert.verifyUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 hover:scale-95 group/btn"
+                                    style={{
+                                        background: `${cert.accent}22`,
+                                        color: cert.accent,
+                                        border: `1px solid ${cert.accent}35`,
+                                    }}
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                    </svg>
+                                    Verify Certificate
+                                </a>
+                            ) : (
+                                <div className="h-8" /> // Spacer when no verify button
+                            )}
                         </motion.div>
                     ))}
                 </motion.div>
