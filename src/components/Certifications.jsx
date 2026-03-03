@@ -138,7 +138,7 @@ export default function Certifications() {
                     variants={fadeIn} initial="hidden" animate={inView ? 'show' : 'hidden'} custom={0}
                     className="flex items-center gap-3 mb-4"
                 >
-                    <span className="text-xs font-bold tracking-[0.25em] uppercase text-electric/80">04 — Credentials</span>
+                    <span className="text-xs font-bold tracking-[0.25em] uppercase text-electric/80">05 — Credentials</span>
                     <div className="flex-1 h-px bg-gradient-to-r from-electric/30 to-transparent max-w-[120px]" />
                 </motion.div>
 
